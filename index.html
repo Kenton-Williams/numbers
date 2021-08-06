@@ -8,12 +8,15 @@
 
         let guess = prompt("guess a number between 1 and 100");
 
-        if(num == guess)
+        if(num > guess)
         {
-            alert("Got it!");
+            alert("Lower");
+        } elseif(num < guess){
+            alert("higher");
         }else{
             alert("Sorry!  You guessed " + guess + " and the number was " + num);
         }
+
 
 	</script>
 </body>
