@@ -3,22 +3,36 @@
 <head>
 </head>
 <body>
-	<script>
+    <script>
         let num = Math.floor(Math.random() * 101);
-
         let guess = prompt("guess a number between 1 and 100");
+        let gotIt = false;
+        let numGuesses = 0;
 
-        if(num > guess){
-            alert("Lower");
+        while(gotIt === false){
+            numGuesses++;
+            if(num == guess)
+            {
+                
+                gotIt = true; 
+            }else{
 
-        }else if(num < guess){
-            alert("higher");
-        }else{
 
-            alert("Sorry!  You guessed " + guess + " and the number was " + num);
+                if(num > guess){
+                    guess = prompt ("Higher!")
+
+
+                }else{//lower!
+                    guess = prompt ("Lower!")
+
+             }
+
+                //guess = prompt("guess again"); 
+
+            }
+
         }
+        alert("Got it! You guessed " + numGuesses + " times ");
+        
 
-
-	</script>
-</body>
-</html>
+    </script>
